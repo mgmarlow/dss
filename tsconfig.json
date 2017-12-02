@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "sourceRoot": "index.ts",
+        "noImplicitAny": true,
+        "outDir": "./dist",
+        "removeComments": true,
+        "preserveConstEnums": true,
+        "sourceMap": true
+    }
+}
