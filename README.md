@@ -6,9 +6,11 @@ A tool for composing letters in the command line. Inspired by [jrnl](http://jrnl
 > dear Beatrice, Then is courtesy a turncoat. But it is certain I am loved of all ladies,
 only you excepted; and I would I could find in my heart that I had not a hard heart,
 for truly I love none. --yours, Benedick
+```
 
 Results in:
-  
+
+```  
 beatrice-12-2-17.txt
 > Dear Beatrice,
 > 
@@ -27,8 +29,11 @@ beatrice-12-2-17.txt
 ```
 
 ## Roadmap
-* Custom signatures
-* Templates
-* Timestamped notes
-* Multiple output formats
-* Copy to clipboard
+[ ] Basic letter templates and save to file
+[ ] Custom signatures
+[ ] Templates
+[ ] Editing utilities
+[ ] Searching utilities
+[ ] Notetaking
+[ ] Multiple output formats
+[ ] Copy to clipboard

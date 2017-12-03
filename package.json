@@ -4,8 +4,8 @@
   "description": "Compose letters at the command line.",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js Beatrice: Then is courtesy a turncoat",
-    "test": "node test/cli.js"
+    "start": "node index.js Beatrice, Then is courtesy a turncoat. --yours, Benedick",
+    "test": "node test/all.js"
   },
   "repository": {
     "type": "git",
