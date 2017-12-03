@@ -4,7 +4,7 @@
   "description": "Compose letters at the command line.",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "node index.js Beatrice: Then is courtesy a turncoat",
     "test": "node test/cli.js"
   },
   "repository": {
@@ -24,5 +24,8 @@
   "homepage": "https://github.com/mgmarlow/dss#readme",
   "devDependencies": {
     "tape": "^4.8.0"
+  },
+  "dependencies": {
+    "minimist": "^1.2.0"
   }
 }
