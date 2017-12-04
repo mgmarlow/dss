@@ -1,1 +1,2 @@
 require('./composition');
+require('./templates');
