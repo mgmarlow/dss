@@ -4,13 +4,14 @@
   "description": "Compose letters at the command line.",
   "main": "index.js",
   "bin": {
-    "dear": "index.js"
+    "dear": "./bin/index.js"
   },
   "scripts": {
-    "start": "node index.js Beatrice, Then is courtesy a turncoat. --yours, Benedick",
-    "formal": "node index.js Beatrice, Then is courtesy a turncoat. --yours, Benedick --tpl formal",
-    "sig": "node index.js --sig Holmes, detective. Entrepreneur. Smart guy.",
-    "test": "node test/all.js"
+    "start": "node ./bin/index.js Beatrice, Then is courtesy a turncoat. --yours, Benedick",
+    "formal": "node ./bin/index.js Beatrice, Then is courtesy a turncoat. --yours, Benedick --tpl formal",
+    "sig": "node ./bin/index.js --sig Holmes, detective. Entrepreneur. Smart guy.",
+    "test": "node test/all.js",
+    "patch-release": "npm version patch && npm publish && git push --follow-tags"
   },
   "repository": {
     "type": "git",
