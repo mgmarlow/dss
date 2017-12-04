@@ -1,5 +1,5 @@
 {
-  "name": "dear-sns",
+  "name": "dss",
   "version": "0.1.1",
   "description": "Compose letters at the command line.",
   "main": "index.js",
