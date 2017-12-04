@@ -25,7 +25,7 @@ beatrice-12-2-17.txt
 
 ## Installation
 ```
-// todo
+npm install -g dear-sns
 ```
 
 ## Roadmap

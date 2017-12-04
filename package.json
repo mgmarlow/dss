@@ -1,6 +1,6 @@
 {
-  "name": "dear-so-and-so",
-  "version": "0.0.0",
+  "name": "dear-sns",
+  "version": "0.1.0",
   "description": "Compose letters at the command line.",
   "main": "index.js",
   "scripts": {
