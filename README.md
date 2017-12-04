@@ -51,9 +51,8 @@ follow the standard `mustache` handlebar syntax with the following keywords:
 * **body** - The body text of the letter
 * **author** - The author of the letter
 
-Here's the default template for letters, called "basic-letter":
+Here's the default template for letters, `basic-letter.mustache`:
 
-`basic-letter.mustache`
 ```
 Dear {{ subject }},
 
@@ -66,7 +65,7 @@ Yours,
 Create your own template in the `./templates/` directory and pass it in using `--tpl`:
 
 ```
-dear Beatrice, Then is courtesy a turncoat. --tpl my-template
+dear Beatrice, Then is courtesy a turncoat. --tpl basic-letter
 ```
 
 ## Roadmap
