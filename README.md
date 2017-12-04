@@ -29,7 +29,7 @@ beatrice-12-2-17.txt
 ```
 
 ## Roadmap
-[ ] Basic letter templates and save to file
+[x] Basic letter templates and save to file
 [ ] Custom signatures
 [ ] Templates
 [ ] Editing utilities

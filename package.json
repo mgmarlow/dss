@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js Beatrice, Then is courtesy a turncoat. --yours, Benedick",
+    "formal": "node index.js Beatrice, Then is courtesy a turncoat. --yours, Benedick --tpl formal",
     "test": "node test/all.js"
   },
   "repository": {
