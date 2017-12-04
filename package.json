@@ -9,6 +9,7 @@
   "scripts": {
     "start": "node ./bin/index.js Beatrice, Then is courtesy a turncoat. --yours, Benedick",
     "formal": "node ./bin/index.js Beatrice, Then is courtesy a turncoat. --yours, Benedick --tpl formal",
+    "empty": "node ./bin/index.js test",
     "sig": "node ./bin/index.js --sig Holmes, detective. Entrepreneur. Smart guy.",
     "test": "node test/all.js",
     "patch-release": "npm version patch && npm publish && git push --follow-tags"

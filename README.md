@@ -28,6 +28,17 @@ beatrice-12-2-17.txt
 npm install -g dear-sns
 ```
 
+## Documentation
+Compose letters with the `dear` command, following much in the way that you would write a normal letter.
+
+After `dear`, if the next word contains a `,` at the end, that word will be your subject. For example,
+`dear Beatrice,` has the subject: `Beatrice`. If no subject is provided and you want to jump straight into the
+body of your letter, the default subject is "so and so". All text that follows will be the body of your letter.
+End your letter with `--yours, author` to provide the name of the author, or "truly" if none provided.
+
+Dear So & So saves new letters at the path: `%USERPROFILE%/dear-sns/compositions/`. Letters are named with the
+format: `<subject>-<timestamp>.txt`.
+
 ## Roadmap
 * [x] Basic letter templates and save to file
 * [ ] Custom signatures
