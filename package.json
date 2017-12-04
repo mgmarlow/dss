@@ -1,8 +1,11 @@
 {
   "name": "dear-sns",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Compose letters at the command line.",
   "main": "index.js",
+  "bin": {
+    "dear": "index.js"
+  },
   "scripts": {
     "start": "node index.js Beatrice, Then is courtesy a turncoat. --yours, Benedick",
     "formal": "node index.js Beatrice, Then is courtesy a turncoat. --yours, Benedick --tpl formal",
