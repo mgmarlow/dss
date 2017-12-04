@@ -6,6 +6,7 @@
   "scripts": {
     "start": "node index.js Beatrice, Then is courtesy a turncoat. --yours, Benedick",
     "formal": "node index.js Beatrice, Then is courtesy a turncoat. --yours, Benedick --tpl formal",
+    "sig": "node index.js --sig Holmes, detective. Entrepreneur. Smart guy.",
     "test": "node test/all.js"
   },
   "repository": {
