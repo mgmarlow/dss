@@ -29,11 +29,11 @@ npm install -g dear-sns
 ```
 
 ## Roadmap
-[x] Basic letter templates and save to file
-[ ] Custom signatures
-[ ] Templates
-[ ] Editing utilities
-[ ] Searching utilities
-[ ] Notetaking
-[ ] Multiple output formats
-[ ] Copy to clipboard
+* [x] Basic letter templates and save to file
+* [ ] Custom signatures
+* [x] Template engine
+* [ ] Editing utilities
+* [ ] Searching utilities
+* [ ] Notetaking
+* [ ] Multiple output formats
+* [ ] Copy to clipboard
