@@ -42,6 +42,12 @@ End your letter with `--yours, author` to provide the name of the author, or "tr
 Dear So & So saves new letters at the path: `%USERPROFILE%/dear-sns/compositions/`. Letters are named with the
 format: `<subject>-<timestamp>.txt`.
 
+## Templates
+
+### Built-in Templates
+
+* **basic-letter**
+
 
 ### Custom Templates
 You can write your own letter templates and provide them to Dear So & So through the `--tpl` command. Templates
@@ -62,10 +68,10 @@ Yours,
 {{ author }}
 ```
 
-Create your own template in the `./templates/` directory and pass it in using `--tpl`:
+Create your own template in any directory and pass it in using `--tpl`:
 
 ```
-dear Beatrice, Then is courtesy a turncoat. --tpl basic-letter
+dear Beatrice, Then is courtesy a turncoat. --tpl ./templates/basic-letter.mustache
 ```
 
 ## Roadmap

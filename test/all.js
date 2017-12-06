@@ -1,2 +1,2 @@
-require('./composition');
-require('./templates');
+require('./composition')
+require('./templates')

@@ -11,8 +11,9 @@
     "formal": "node ./bin/index.js Beatrice, Then is courtesy a turncoat. --yours, Benedick --tpl formal",
     "empty": "node ./bin/index.js test",
     "sig": "node ./bin/index.js --sig Holmes, detective. Entrepreneur. Smart guy.",
-    "test": "node test/all.js",
-    "patch-release": "npm version patch && npm publish && git push --follow-tags"
+    "test": "standard && node test/all.js",
+    "patch-release": "npm version patch && npm publish && git push --follow-tags",
+    "fix-style": "standard --fix"
   },
   "repository": {
     "type": "git",
@@ -30,6 +31,7 @@
   },
   "homepage": "https://github.com/mgmarlow/dss#readme",
   "devDependencies": {
+    "standard": "^10.0.3",
     "tape": "^4.8.0"
   },
   "dependencies": {
