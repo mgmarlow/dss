@@ -1,9 +1,9 @@
-# Dear So & So
+# Stationery
 
 A tool for composing letters in the command line. Inspired by [jrnl](http://jrnl.sh/).
 
 ```
-> dear Beatrice, Then is courtesy a turncoat. But it is certain I am loved of all ladies,
+$ dear Beatrice, Then is courtesy a turncoat. But it is certain I am loved of all ladies,
 only you excepted; and I would I could find in my heart that I had not a hard heart,
 for truly I love none. --yours, Benedick
 ```
@@ -25,7 +25,7 @@ beatrice-12-2-17.txt
 
 ## Installation
 ```
-npm install -g dear-sns
+npm install -g node-stationery
 ```
 
 ## Documentation

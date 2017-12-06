@@ -1,5 +1,5 @@
 {
-  "name": "dear-sns",
+  "name": "node-stationery",
   "version": "0.1.6",
   "description": "Compose letters at the command line.",
   "main": "index.js",
