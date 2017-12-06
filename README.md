@@ -39,7 +39,7 @@ After `dear`, if the next word contains a `,` at the end, that word will be your
 body of your letter, the default subject is "so and so". All text that follows will be the body of your letter.
 End your letter with `--yours, author` to provide the name of the author, or "truly" if none provided.
 
-Dear So & So saves new letters at the path: `%USERPROFILE%/dear-sns/compositions/`. Letters are named with the
+Stationery saves new letters at the path: `%USERPROFILE%/stationery/compositions/`. Letters are named with the
 format: `<subject>-<timestamp>.txt`.
 
 ## Templates
@@ -77,7 +77,7 @@ dear Beatrice, Then is courtesy a turncoat. --tpl ./templates/basic-letter.musta
 ## Roadmap
 * [x] Basic letter templates and save to file
 * [ ] Custom signatures
-* [x] Template engine
+* [ ] Template engine (allow users to provide path to mustache template)
 * [ ] Editing utilities
 * [ ] Searching utilities
 * [ ] Notetaking
