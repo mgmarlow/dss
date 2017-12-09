@@ -28,19 +28,24 @@ beatrice-12-2-17.txt
 npm install -g stationery
 ```
 
-## Documentation
-
-
-### Compositions
+## Compositions
 Compose letters with the `dear` command, following much in the way that you would write a normal letter.
 
-After `dear`, if the next word contains a `,` at the end, that word will be your subject. For example,
-`dear Beatrice,` has the subject: `Beatrice`. If no subject is provided and you want to jump straight into the
-body of your letter, the default subject is "so and so". All text that follows will be the body of your letter.
-End your letter with `--yours, author` to provide the name of the author, or "truly" if none provided.
+`stationery` compositions require a subject to be specified. Provide a subject by providing
+a word that ends in a comma, for example, `dear Beatrice,` or `dear Don John,`. From there,
+`stationery` will interpret the rest of the command to be the body of the letter.
+
+End your letter with `--yours, author` to provide the name of the author. This will default
+to "truly". You can provide default signatures in a separate configuration file, specified
+below.
 
 Stationery saves new letters at the path: `%USERPROFILE%/stationery/compositions/`. Letters are named with the
 format: `<subject>-<timestamp>.txt`.
+
+## Configuration
+```
+// todo
+```
 
 ## Templates
 
@@ -48,36 +53,49 @@ format: `<subject>-<timestamp>.txt`.
 
 * **basic-letter**
 
+Use a built-in template with the `--tpl` command:
+```
+dear Beatrice, Then is courtesy a turncoat. --tpl basic-letter
+```
+
 
 ### Custom Templates
-You can write your own letter templates and provide them to Dear So & So through the `--tpl` command. Templates
-follow the standard `mustache` handlebar syntax with the following keywords:
+You can also write your own letter templates and provide them to Stationery through the
+`--tpl` command. To do this, simply make your own template (`.mustache`) and pass the file 
+in as the parameter to `--tpl`.
+
+```
+dear Beatrice, Then is courtesy a turncoat. --tpl ./love-letters/my-template.mustache
+```
+
+Templates follow the standard `mustache` handlebar syntax with the following keywords:
 
 * **subject** - The subject of the letter
 * **body** - The body text of the letter
 * **author** - The author of the letter
 
-Here's the default template for letters, `basic-letter.mustache`:
+Let's make a more formal letter, say `formal-letter.mustache`.
 
 ```
-Dear {{ subject }},
+Dearest {{ subject }},
 
 {{ body }}
 
-Yours,
+Sincerely,
 {{ author }}
 ```
 
 Create your own template in any directory and pass it in using `--tpl`:
 
 ```
-dear Beatrice, Then is courtesy a turncoat. --tpl ./templates/basic-letter.mustache
+dear Beatrice, Then is courtesy a turncoat. --tpl ./templates/formal-letter.mustache
 ```
 
 ## Roadmap
 * [x] Basic letter templates and save to file
 * [x] Template engine (allow users to provide path to mustache template)
-* [ ] Custom signatures
+* [x] Multi-word subjects
+* [ ] Configuration: default signatures
 * [ ] Editing utilities
 * [ ] Searching utilities
 * [ ] Website

@@ -1,3 +1,2 @@
 #!/usr/bin/env node
-const run = require('../lib/run')
-run()
+require('../lib/run')()
