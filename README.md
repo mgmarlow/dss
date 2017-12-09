@@ -25,7 +25,7 @@ beatrice-12-2-17.txt
 
 ## Installation
 ```
-npm install -g node-stationery
+npm install -g stationery
 ```
 
 ## Documentation
