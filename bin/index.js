@@ -1,3 +1,3 @@
 #!/usr/bin/env node
-const cli = require('../lib/cli')
-cli.run()
+const run = require('../lib/run')
+run()

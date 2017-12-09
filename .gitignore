@@ -1,3 +1,4 @@
 dist/
 node_modules/
 formal.mustache
+stationery.config.json

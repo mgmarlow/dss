@@ -1,5 +1,5 @@
 const test = require('tape')
-const parseTemplate = require('../lib/templates')
+const parseTemplate = require('../lib/parse-template')
 
 test('parse should fill in mustache keywords on basic letter tpl', t => {
   t.plan(3)
