@@ -1,8 +1,8 @@
+![build status](https://travis-ci.org/mgmarlow/dss.svg?branch=master)
+
 # Stationery
 
 A tool for composing letters in the command line. Inspired by [jrnl](http://jrnl.sh/).
-
-![build status](https://travis-ci.org/mgmarlow/dss.svg?branch=master)
 
 ```
 $ dear Beatrice, Then is courtesy a turncoat. But it is certain I am loved of all ladies,
