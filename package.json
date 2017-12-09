@@ -8,7 +8,7 @@
   },
   "scripts": {
     "start": "node ./bin/index.js Beatrice, Then is courtesy a turncoat. --yours, Benedick",
-    "formal": "node ./bin/index.js Beatrice, Then is courtesy a turncoat. --yours, Benedick --tpl formal",
+    "formal": "node ./bin/index.js Beatrice, Then is courtesy a turncoat. --yours, Benedick --tpl ./formal.mustache",
     "empty": "node ./bin/index.js test",
     "sig": "node ./bin/index.js --sig Holmes, detective. Entrepreneur. Smart guy.",
     "test": "standard && node test/all.js",
