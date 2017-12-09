@@ -17,12 +17,21 @@ test('composition should add subject and body', t => {
   t.equal(composition.subject, 'Beatrice')
 })
 
-test('composition should give default subject if none provided', t => {
+test('composition should allow for multi-word subjects', t => {
+  t.plan(1)
+  const rawArgs = { '_': ['Jane', 'Doe,', 'Then', 'is', 'courtesy', 'a', 'turncoat.'] }
+  const text = rawArgs['_']
+  const composition = createComposition(text)
+  t.equal(composition.subject, 'Jane Doe')
+})
+
+test('composition should throw exception if no subject provided', t => {
   t.plan(1)
   const rawArgs = { '_': ['Then', 'is', 'courtesy', 'a', 'turncoat.'] }
   const text = rawArgs['_']
-  const composition = createComposition(text)
-  t.equal(composition.subject, 'so and so')
+  t.throws(() => {
+    createComposition(text)
+  }, /Please provide a subject. e.g. dear <subject>, <letter body>/)
 })
 
 test('composition should provide author if --yours flag is provided', t => {
