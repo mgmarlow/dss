@@ -76,10 +76,11 @@ dear Beatrice, Then is courtesy a turncoat. --tpl ./templates/basic-letter.musta
 
 ## Roadmap
 * [x] Basic letter templates and save to file
-* [ ] Custom signatures
 * [ ] Template engine (allow users to provide path to mustache template)
+* [ ] Custom signatures
 * [ ] Editing utilities
 * [ ] Searching utilities
+* [ ] Website
 * [ ] Notetaking
 * [ ] Multiple output formats
 * [ ] Copy to clipboard
