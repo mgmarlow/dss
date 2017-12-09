@@ -18,11 +18,12 @@ test('composition should add subject and body', t => {
 })
 
 test('composition should allow for multi-word subjects', t => {
-  t.plan(1)
+  t.plan(2)
   const rawArgs = { '_': ['Jane', 'Doe,', 'Then', 'is', 'courtesy', 'a', 'turncoat.'] }
   const text = rawArgs['_']
   const composition = createComposition(text)
   t.equal(composition.subject, 'Jane Doe')
+  t.equal(composition.body, 'Then is courtesy a turncoat.')
 })
 
 test('composition should throw exception if no subject provided', t => {
