@@ -45,8 +45,17 @@ Stationery saves new letters at the path: `%USERPROFILE%/stationery/compositions
 format: `<subject>-<timestamp>.txt`.
 
 ## Configuration
-```
-// todo
+By default, `stationery` will look for configuration at `%USERPROFILE%/.stationeryconfig`.
+You can override this behavior with the `--config` argument, supplying your own json file
+as the argument.
+
+An example configuration file:
+
+`.stationeryconfig`
+```json
+{
+    "signature": "Holmes: detective, entreprenuer, smart guy."
+}
 ```
 
 ## Templates
@@ -97,7 +106,7 @@ dear Beatrice, Then is courtesy a turncoat. --tpl ./templates/formal-letter.must
 * [x] Basic letter templates and save to file
 * [x] Template engine (allow users to provide path to mustache template)
 * [x] Multi-word subjects
-* [ ] Configuration: default signatures
+* [x] Configuration: default signatures
 * [ ] Editing utilities
 * [ ] Searching utilities
 * [ ] Website

@@ -35,24 +35,14 @@ test('createComposition should throw exception if no subject provided', t => {
   }, /Please provide a subject. e.g. dear <subject>, <letter body>/)
 })
 
-test('createComposition should provide author if --yours flag is provided', t => {
+test('createComposition should provide signature if --yours flag is provided', t => {
   t.plan(1)
   const rawArgs = {
     '_': ['Beatrice,', 'Then', 'is', 'courtesy', 'a', 'turncoat.'],
     'yours,': 'Benedick'
   }
   const text = rawArgs['_']
-  const author = rawArgs['yours,']
-  const composition = createComposition(text, author)
-  t.equal(composition.author, 'Benedick')
-})
-
-test('createComposition should provide default author "truly"', t => {
-  t.plan(1)
-  const rawArgs = {
-    '_': ['Beatrice,', 'Then', 'is', 'courtesy', 'a', 'turncoat.']
-  }
-  const text = rawArgs['_']
-  const composition = createComposition(text)
-  t.equal(composition.author, 'truly')
+  const sig = rawArgs['yours,']
+  const composition = createComposition(text, sig)
+  t.equal(composition.signature, 'Benedick')
 })
