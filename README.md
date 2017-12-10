@@ -1,3 +1,4 @@
+[![npm version](https://badge.fury.io/js/stationery.svg)](https://badge.fury.io/js/stationery)
 ![build status](https://travis-ci.org/mgmarlow/dss.svg?branch=master)
 
 # Stationery
