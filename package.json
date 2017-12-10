@@ -12,8 +12,10 @@
     "alt-config": "node ./bin/index.js Beatrice, Thus. --config ./love-letters/config.json",
     "sig": "node ./bin/index.js config, --sig detective. Entrepreneur. Smart guy.",
     "test": "standard && node test/all.js",
+    "fix-style": "standard --fix",
     "patch-release": "npm version patch && npm publish && git push --follow-tags",
-    "fix-style": "standard --fix"
+    "minor-release": "npm version minor && npm publish && git push --follow-tags",
+    "major-release": "npm version major && npm publish && git push --follow-tags"
   },
   "repository": {
     "type": "git",
