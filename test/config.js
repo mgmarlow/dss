@@ -11,7 +11,7 @@ test('configuration should error if provided config file cannot be found', t => 
 
 test('configuration should read signature from external file', t => {
   t.plan(1)
-  const config = new Configuration('./test/config.json')
+  const config = new Configuration('./test/files/config.json')
   config.load()
   t.equal(config.signature, 'Holmes, cool guy.')
 })
