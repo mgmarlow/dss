@@ -1,48 +1,38 @@
 const test = require('tape')
-const createComposition = require('../lib/create-composition')
+const Composition = require('../lib/composition')
 
-test('createComposition should properly parse body text', t => {
-  t.plan(1)
-  const rawArgs = { '_': ['Beatrice,', 'Then', 'is', 'courtesy', 'a', 'turncoat.'] }
-  const text = rawArgs['_']
-  const composition = createComposition(text)
-  t.equal(composition.body, 'Then is courtesy a turncoat.')
+test('composition should set subject, body, and signature', t => {
+  t.plan(3)
+  const comp = new Composition('Hello.', 'Beatrice', 'Benedick')
+  t.equal(comp.body, 'Hello.')
+  t.equal(comp.subject, 'Beatrice')
+  t.equal(comp.signature, 'Benedick')
 })
 
-test('createComposition should add subject and body', t => {
+test('composition leterName should turn subject into filename', t => {
   t.plan(1)
-  const rawArgs = { '_': ['Beatrice,', 'Then', 'is', 'courtesy', 'a', 'turncoat.'] }
-  const text = rawArgs['_']
-  const composition = createComposition(text)
-  t.equal(composition.subject, 'Beatrice')
+  const subject = 'Beatrice'
+  const comp = new Composition('Hello.', subject, 'Benedick')
+  t.assert(comp.letterName.includes(subject))
 })
 
-test('createComposition should allow for multi-word subjects', t => {
-  t.plan(2)
-  const rawArgs = { '_': ['Jane', 'Doe,', 'Then', 'is', 'courtesy', 'a', 'turncoat.'] }
-  const text = rawArgs['_']
-  const composition = createComposition(text)
-  t.equal(composition.subject, 'Jane Doe')
-  t.equal(composition.body, 'Then is courtesy a turncoat.')
+test('composition letterName should timestamp', t => {
+  t.plan(1)
+  const comp = new Composition('Hello.', 'Beatrice', 'Benedick')
+  const now = new Date().toLocaleDateString().replace('/', '-')
+  t.assert(comp.letterName.includes(now))
 })
 
-test('createComposition should throw exception if no subject provided', t => {
+test('composition letterName outputs as txt', t => {
   t.plan(1)
-  const rawArgs = { '_': ['Then', 'is', 'courtesy', 'a', 'turncoat.'] }
-  const text = rawArgs['_']
-  t.throws(() => {
-    createComposition(text)
-  }, /Please provide a subject. e.g. dear <subject>, <letter body>/)
+  const comp = new Composition('Hello.', 'Beatrice', 'Benedick')
+  const letter = comp.letterName
+  t.equal(letter.substring(letter.length - 4, letter.length), '.txt')
 })
 
-test('createComposition should provide signature if --yours flag is provided', t => {
+test('composition should set spaces in subject name to dashes', t => {
   t.plan(1)
-  const rawArgs = {
-    '_': ['Beatrice,', 'Then', 'is', 'courtesy', 'a', 'turncoat.'],
-    'yours,': 'Benedick'
-  }
-  const text = rawArgs['_']
-  const sig = rawArgs['yours,']
-  const composition = createComposition(text, sig)
-  t.equal(composition.signature, 'Benedick')
+  const subject = 'Don John'
+  const comp = new Composition('Hello.', subject, 'Benedick')
+  t.assert(comp.letterName.includes(subject.replace(' ', '-')))
 })
