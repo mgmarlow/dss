@@ -1,6 +1,6 @@
 {
   "name": "stationery",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "Compose letters at the command line.",
   "main": "index.js",
   "bin": {
