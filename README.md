@@ -13,7 +13,7 @@ for truly I love none. --yours, Benedick
 Results in:
 
 ```  
-beatrice-12-2-17.txt
+Beatrice-12-2-17.txt
 > Dear Beatrice,
 > 
 > Then is courtesy a turncoat. But it is certain
@@ -33,13 +33,21 @@ npm install -g stationery
 ## Compositions
 Compose letters with the `dear` command, following much in the way that you would write a normal letter.
 
-`stationery` compositions require a subject to be specified. Provide a subject by providing
-a word that ends in a comma, for example, `dear Beatrice,` or `dear Don John,`. From there,
-`stationery` will interpret the rest of the command to be the body of the letter.
+```
+dear <subject>, <body> --yours, <signature>
+```
 
-End your letter with `--yours, author` to provide the name of the author. This will default
-to "truly". You can provide default signatures in a separate configuration file, specified
-below.
+Compositions require that a subject is specified. The subject line **must** end with a comma.
+
+```
+dear Beatrice,
+dear Don John,
+```
+
+The rest of the command will be interpreted as the letter's body, up until any optional arguments.
+
+End your letter with `--yours, signature` to provide your name as a signature. Signatures will
+default to "truly" unless otherwise specified in the `.stationeryconfig`.
 
 Stationery saves new letters at the path: `%USERPROFILE%/stationery/compositions/`. Letters are named with the
 format: `<subject>-<timestamp>.txt`.
@@ -58,11 +66,24 @@ An example configuration file:
 }
 ```
 
+With the above configuration, this will be your output from stationery:
+```
+$ dear Beatrice, Hello.
+
+/usr/stationery/compositions/Beatrice-12-2-17.txt
+> Dear Beatrice,
+>
+> Hello.
+>
+> Yours,
+> Holmes: detective, entreprenuer, smart guy.
+```
+
 ## Templates
 
 ### Built-in Templates
 
-* **basic-letter**
+* **basic-letter** (default)
 
 Use a built-in template with the `--tpl` command:
 ```
