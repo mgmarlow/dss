@@ -8,7 +8,7 @@ A tool for composing letters in the command line. Inspired by [jrnl](http://jrnl
 ```
 $ dear Beatrice, Then is courtesy a turncoat. But it is certain I am loved of all ladies,
 only you excepted; and I would I could find in my heart that I had not a hard heart,
-for truly I love none. --yours, Benedick
+for truly I love none. -- Benedick
 ```
 
 Results in:
@@ -35,7 +35,7 @@ npm install -g stationery
 Compose letters with the `dear` command, following much in the way that you would write a normal letter.
 
 ```
-dear <subject>, <body> --yours, <signature>
+dear <subject>, <body> -- <signature>
 ```
 
 Compositions require that a subject is specified. The subject line **must** end with a comma.
@@ -47,8 +47,13 @@ dear Don John,
 
 The rest of the command will be interpreted as the letter's body, up until any optional arguments.
 
-End your letter with `--yours, signature` to provide your name as a signature. Signatures will
-default to "truly" unless otherwise specified in the `.stationeryconfig`.
+End your letter with `-- <signature>` to provide your name as a signature. Signatures will
+default to "truly" unless otherwise specified in the `.stationeryconfig`. **Note**: a signature must
+be the last item provided to `stationery`, meaning all other arguments must come before it:
+
+```
+dear Beatrice, Hello. --tpl informal-greeting -- Benedick
+```
 
 Stationery saves new letters at the path: `%USERPROFILE%/stationery/compositions/`. Letters are named with the
 format: `<subject>-<timestamp>.txt`.

@@ -7,15 +7,13 @@
     "dear": "./bin/index.js"
   },
   "scripts": {
-    "start": "node ./bin/index.js Beatrice, Then is courtesy a turncoat. --yours, Benedick",
-    "formal": "node ./bin/index.js Beatrice, Then is courtesy a turncoat. --yours, Benedick --tpl ./formal.mustache",
+    "start": "node ./bin/index.js Beatrice, Then is courtesy a turncoat. -- Don John",
+    "formal": "node ./bin/index.js Beatrice, Then is courtesy a turncoat. --tpl ./formal.mustache -- Benedick",
     "alt-config": "node ./bin/index.js Beatrice, Thus. --config ./love-letters/config.json",
-    "sig": "node ./bin/index.js config, --sig detective. Entrepreneur. Smart guy.",
+    "list": "node ./bin/index.js --ls",
     "test": "standard && node test/all.js",
     "fix-style": "standard --fix",
-    "patch-release": "npm version patch && npm publish && git push --follow-tags",
-    "minor-release": "npm version minor && npm publish && git push --follow-tags",
-    "major-release": "npm version major && npm publish && git push --follow-tags"
+    "patch-release": "npm version patch && npm publish && git push --follow-tags"
   },
   "repository": {
     "type": "git",

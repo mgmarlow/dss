@@ -35,14 +35,14 @@ test('createComposition should throw exception if no subject provided', t => {
   }, /Please provide a subject. e.g. dear <subject>, <letter body>/)
 })
 
-test('createComposition should provide signature if --yours flag is provided', t => {
+test('createComposition should provide signature for everything after --', t => {
   t.plan(1)
   const rawArgs = {
     '_': ['Beatrice,', 'Then', 'is', 'courtesy', 'a', 'turncoat.'],
-    'yours,': 'Benedick'
+    '--': ['Benedick']
   }
   const text = rawArgs['_']
-  const sig = rawArgs['yours,']
+  const sig = rawArgs['--'].join(' ')
   const composition = createComposition(text, sig)
   t.equal(composition.signature, 'Benedick')
 })
