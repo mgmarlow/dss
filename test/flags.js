@@ -4,10 +4,27 @@ const getFlags = require('../lib/flags')
 
 test('getFlags should find list arg', t => {
   t.plan(1)
-  const raw = ['--ls']
+  const raw = ['--list']
   const argv = minimist(raw, { '--': true })
   const flags = getFlags(argv)
   t.assert(flags.util.list)
+})
+
+test('getFlags should find list arg abbreviated', t => {
+  t.plan(1)
+  const raw = ['-l']
+  const argv = minimist(raw, { '--': true })
+  const flags = getFlags(argv)
+  t.assert(flags.util.list)
+})
+
+test('getFlags should find list arg combined with all', t => {
+  t.plan(2)
+  const raw = ['-la']
+  const argv = minimist(raw, { '--': true })
+  const flags = getFlags(argv)
+  t.assert(flags.util.list)
+  t.assert(flags.util.all)
 })
 
 test('getFlags should pick up entire signature', t => {
