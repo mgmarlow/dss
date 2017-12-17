@@ -137,6 +137,7 @@ dear Beatrice, Then is courtesy a turncoat. --tpl ./templates/formal-letter.must
 * [ ] Editing utilities
 * [ ] Searching utilities
 * [ ] Website
+* [ ] Provide more templating utilities
 * [ ] Notetaking
 * [ ] Multiple output formats
 * [ ] Copy to clipboard
