@@ -58,6 +58,31 @@ dear Beatrice, Hello. --tpl informal-greeting -- Benedick
 Stationery saves new letters at the path: `%USERPROFILE%/stationery/compositions/`. Letters are named with the
 format: `<subject>-<timestamp>.txt`.
 
+## Working with Compositions
+**list**: List all compositions with `-l` or `--list`:
+```
+dear -l
+
+> Beatrice-2017-12-9.txt
+> Don-John-2017-12-10.txt
+```
+
+**list all**: List compositions with contents with `-la` or `--list --all`:
+```
+dear -la
+
+> Beatrice-2017-12-9.txt
+>Dear Beatrice,
+>
+>Then is courtesy a turncoat.
+>
+>Yours,
+>Benedick
+
+...
+```
+
+
 ## Configuration
 By default, `stationery` will look for configuration at `%USERPROFILE%/.stationeryconfig`.
 You can override this behavior with the `--config` argument, supplying your own json file
