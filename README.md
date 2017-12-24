@@ -82,6 +82,17 @@ dear -la
 ...
 ```
 
+**editor**: Open an editor (default vim) with `-e` or `--editor`. Letters will be saved to
+your compositions directory: 
+
+```
+dear -e
+
+> Name your composition: To Beatrice
+# Opens vim
+# Saves to usr/stationery/compositions/To-Beatrice-2017-12-24.txt
+```
+
 
 ## Configuration
 By default, `stationery` will look for configuration at `%USERPROFILE%/.stationeryconfig`.
